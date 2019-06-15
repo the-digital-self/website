@@ -1,6 +1,6 @@
 locale: en-US
 title: "The Digital Self"
-description: "Helping you look after and care for your digital soul."
+description: "Are you looking after and tending to your digital soul?"
 baseurl: /
 url: http://thedigitalself.org
 logo: # path of site logo, e.g. "/images/logo.png"
@@ -70,7 +70,7 @@ defaults:
 
 # Site Author
 author:
-  name:
+  name: Ki Lane
   picture:
   email:
   twitter:
