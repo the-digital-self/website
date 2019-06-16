@@ -1,5 +1,5 @@
 ---
-title: "Feeling Scattered And Stretched Too Thin"
+title: "Feeling Scattered And Stretched Thin"
 hidden: false
 categories:
   - The Beginning
