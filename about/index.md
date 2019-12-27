@@ -2,7 +2,7 @@
 layout: default
 ---
 
-<p align="center">While there are plenty of good things to celebrate about the Internet in our lives, increasingly there are plenty of things to be concerned about. We spend a lot of time online via our home and work computers, as well as our mobile devices, and the growing number of Internet connected devices we seem unable to escape from. The digital self is just about remembering to pause and think more deeply about how and why we use the Internet, and make sure we remember what matters the most--us.</p>
+<p>While there are plenty of good things to celebrate about the Internet in our lives, increasingly there are plenty of things to be concerned about. We spend a lot of time online via our home and work computers, as well as our mobile devices, and the growing number of Internet connected devices we seem unable to escape from. The digital self is just about remembering to pause and think more deeply about how and why we use the Internet, and make sure we remember what matters the most--us.</p>
 
 <p>The Digital Self is a belief that what we do online is us. That there is no difference between on or offline, that there is just us. The data, content, media, and other digital bits and bytes we generate online each day aren't some by-product of our day, that these bits are us. The data are us. The content is us. The photos, videos, and other visuals reflect who we are, and represent a piece of us. Do not listen to the technology companies--we matter.</p>
 
