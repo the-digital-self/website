@@ -52,11 +52,11 @@ search_full_content: false # can have performance implications for large sites
 #   - vendor/gems/
 #   - vendor/ruby/
 
-plugins:
-  - jekyll-seo-tag
-  - jekyll-sitemap
-  - jekyll-feed
-  - jekyll-paginate
+#plugins:
+  #- jekyll-seo-tag
+  #- jekyll-sitemap
+  #- jekyll-feed
+  #- jekyll-paginate
 
 # Front Matter Defaults
 defaults:
