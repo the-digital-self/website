@@ -4,7 +4,9 @@ layout: default
 
 <p align="center">What I write online is me, and reflects who I am each day.</p>
 <p align="center">&#x2756;</p>
-<p align="center">The data, content, metadata, and algorithmic responses I produce each day is not some by-product for harvesting and selling to the highest bidder--it is me.</p>
+<p align="center">The data, content, metadata, and algorithmic responses I produce each day is me.</p>
+<p align="center">&#x2756;</p>
+<p align="center">I am not for sale to the highest bidder.</p>
 <p align="center">&#x2756;</p>
 <p align="center">Photos of me online are me, and represent of piece of who I am each day.</p>
 <p align="center">&#x2756;</p>
