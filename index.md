@@ -2,7 +2,9 @@
 layout: default
 ---
 
-<p align="center">What I write online is me, and reflects who I am each day. The data, content, metadata, and algorithmic responses I produce each day is not some by-product for harvesting and selling to the highest bidder--it is me.</p>
+<p align="center">What I write online is me, and reflects who I am each day.</p>
+<p align="center">&#x2756;</p>
+<p align="center">The data, content, metadata, and algorithmic responses I produce each day is not some by-product for harvesting and selling to the highest bidder--it is me.</p>
 <p align="center">&#x2756;</p>
 <p align="center">Photos of me online are me, and represent of piece of who I am each day.</p>
 <p align="center">&#x2756;</p>
@@ -35,5 +37,6 @@ layout: default
 <p align="center">I regularly evaluate the services and applications I use and ask if they truly bring me joy, and if they do not I delete my account and remove them from my life.</p>
 <p align="center">&#x2756;</p>
 <p align="center">Read that book you have been meaning to read for some time now, putting down the Internet and allowing yourself to be lost for a few brief moments.</p>
+<p align="center">&#x2756;</p>
 <p align="center">Go for a walk. If even for just a few moments around the block, or spend the rest of the day offline enjoying your neighborhood for a few.</p>
 <p align="center">You matter!!</p>
