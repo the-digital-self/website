@@ -1,11 +1,43 @@
-<footer id="footer" class="site-footer">
-  {% include footer-custom.html %}
+</div>
 
-  <div class="copyright">
-    {% if site.copyright %}
-      {{ site.copyright | markdownify }}
-    {% else %}
-      <p>&copy; {{ site.time | date: '%Y' }} {{ site.name | default: site.title }}.</p>
-    {% endif %}
-  </div>
-</footer>
+</div>
+
+<script src="js/reveal.js"></script>
+
+<script>
+
+// More info https://github.com/hakimel/reveal.js#configuration
+Reveal.initialize({
+  controls: false,
+  progress: true,
+  center: true,
+  hash: true,
+  width: "94%",
+  height: "99%",
+  margin: 0,
+  transition: 'slide', // none/fade/slide/convex/concave/zoom
+  /*loop: true,*/
+  autoSlide: 6000,
+  autoSlideStoppable: true,
+
+  // More info https://github.com/hakimel/reveal.js#dependencies
+  dependencies: [
+    { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+    { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+    { src: 'plugin/highlight/highlight.js', async: true },
+    { src: 'plugin/search/search.js', async: true },
+    { src: 'plugin/zoom-js/zoom.js', async: true },
+    { src: 'plugin/notes/notes.js', async: true }
+  ]
+});
+
+//Reveal.add('<h3>Slide title</h3>');
+
+//Reveal.add('<h3>Slide title</h3>');
+
+Reveal.addEventListener( 'last', function() {
+    window.location = 'http://thedigitalself.org/about/';
+} );
+
+
+</script>
