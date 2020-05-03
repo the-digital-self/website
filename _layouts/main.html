@@ -3,7 +3,7 @@
   {% include main-head.html %}
 
   <body class="layout--{{ page.layout | default: layout.layout }}{% if page.classes or layout.classes %}{{ page.classes | default: layout.classes | join: ' ' | prepend: ' ' }}{% endif %} {% if page.entries_layout == 'grid' %}page--wide{% endif %} {{ page.title | slugify }}">
-    {% include main-links.html %}
+
     {% include main-navigation.html %}
     {% include main-masthead.html %}
 
