@@ -1,0 +1,24 @@
+{% if site.mailchimp %}
+<!-- begin subscribe -->
+<div class="container">
+  <div class="row">
+    <div class="col col-12 col-d-10 col-m-12 push-m-0 push-d-1">
+      <section class="subscribe">
+        <div class="subscribe__inner">
+          <h3 class="subscribe__title">Stay Connected</h3>
+          <form class="subscribe__form validate"
+            action="{% if site.mailchimp.mailchimp-identifier %}//{{site.mailchimp.mailchimp-identifier}}{% else %}#{% endif %}" method="POST"
+            id="membedded-subscribe-form" name="membedded-subscribe-form" target="_blank" novalidate>
+            <div class="subscribe__group">
+              <label class="screen-reader-text" for="mce-EMAIL">Email address</label>
+              <input class="subscribe__email required email" id="mce-EMAIL" type="text" name="EMAIL" placeholder="Email Address">
+              <button class="button button--big subscribe__button" id="membedded-subscribe" type="submit" name="subscribe">Subscribe</button>
+            </div>
+          </form>
+        </div>
+      </section>
+    </div>
+  </div>
+</div>
+<!-- emd subscribe -->
+{% endif %}

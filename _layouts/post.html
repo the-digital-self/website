@@ -1,0 +1,43 @@
+---
+layout: default
+---
+
+{% include hero.html %}
+
+<div class="container">
+  <div class="row">
+    <div class="col col-8 push-2 col-d-10 col-m-12 push-d-1 push-m-0">
+      <!-- begin post -->
+      <article class="post animate">
+
+        <div class="post__content">
+          {{ content }}
+        </div>
+
+        {% include share.html %}
+
+        <div class="post-author">
+          <a href="{{site.baseurl}}/about/" class="post-author__image" aria-label="{{site.author.name}}">
+            <img class="lazy" data-src="{{site.baseurl}}{{site.author.avatar}}" alt="{{site.author.name}}">
+          </a>
+          <div class="post-author__info">
+            <h2 class="post-author__name"><a href="{{site.baseurl}}/about/">{{site.author.name}}</a></h2>
+            <p class="post-author__bio">{{site.author.bio}}</p>
+            <div class="post-author__meta">
+              {% for social in site.author-social %}
+              <a class="post-author__link" href="{{social.link}}" target="_blank"><i class="ion {{social.icon}}"></i></a>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+
+      </article>
+      <!-- end post -->
+    </div>
+
+  </div>
+</div>
+
+{% include related-posts.html %}
+
+{% if site.disqus-identifier %} {% include disqus-comments.html %} {% endif %}

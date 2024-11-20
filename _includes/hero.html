@@ -1,0 +1,78 @@
+{% if page.id %}
+  {% assign class = 'hero--post' %}
+{% elsif page.path contains '_pages' or page.url contains '404' %}
+  {% assign class = 'hero--page' %}
+{% else %}
+  {% assign class = 'hero--home' %}
+{% endif %}
+<!-- begin hero -->
+<section class="hero {{class}}">
+  {% if page.id %}
+
+  <div class="hero__image">
+    <img class="lazy" data-src="{{site.baseurl}}{{page.image}}" alt="{{page.title}}">
+  </div>
+
+  <div class="hero__inner">
+
+    <div class="article__meta">
+      <time class="article__date" datetime="{{ page.date | date_to_xmlschema }}">{% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}{{ page.date | date: date_format }}</time>
+  
+      <div class="article-tags">
+        {% if page.tags.size >= 1 %}
+          <div class="article-tags__box">
+            {% for tag in page.tags %}
+              <a href="{{ site.baseurl }}/tag/{{ tag }}" class="article__tag">{{ tag }}</a>
+            {% endfor %}
+          </div>
+          {% else %}
+        {% endif %}
+      </div>
+    </div>
+  
+    <h1 class="hero__title">{{ page.title }}</h1>
+  
+    <div class="article__bottom">
+      <div class="article__author">
+        {% if site.author.avatar %}
+        <a href="{{ site.baseurl }}/about/" class="article__author-image" aria-label="{{site.author.name}}'s Picture"><img class="lazy" data-src="{{site.baseurl}}{{site.author.avatar}}" alt="{{site.author.name}}'s Picture"></a>
+        {% endif %}
+        <a href="{{ site.baseurl }}/about/" class="article__author-name">{{site.author.name}}</a>
+      </div>
+  
+      <span class="article__minutes">
+        {% assign words = page.content | number_of_words %}
+        {% if words < 360 %}
+        1 min read
+        {% else %}
+        {{ words | divided_by:180 }} min read
+        {% endif %}
+      </span>
+    </div>
+
+  </div>
+
+  {% elsif page.path contains '_pages' or page.url contains '404' %}
+  <div class="hero__image">
+    <img class="lazy" data-src="{{site.baseurl}}{{page.image}}" alt="{{page.title}}">
+  </div>
+
+  <div class="hero__inner">
+    <h1 class="hero__title">{{ page.title }}</h1>
+  </div>
+
+  {% else %}
+
+  <div class="hero__image">
+    <img class="lazy" data-src="{{site.baseurl}}{{site.hero.hero__image}}" alt="{{site.hero.hero__title}}">
+  </div>
+  <div class="hero__inner">
+    <div class="hero__content">
+      <h1 class="hero__title">{{site.hero.hero__title}}</h1>
+      <p class="hero__description">{{site.hero.hero__description}}</p>
+    </div>
+  </div>
+
+  {% endif %}
+</section>
+<!-- end hero -->

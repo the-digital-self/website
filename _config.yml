@@ -1,11 +1,92 @@
-opening_title: Demo - API Testing
-opening_image: images/consumers.png
+#-------------------------------
+# General Site Settings
+title: Church of the Digital Self
+logo: '/images/church-of-the-digital-self.jpg'
+description: Defining Your Online Self
+baseurl: ""
+url: ""
 
-closing_title: Download Postman Today!!
-closing_image: images/integrations_postmanaut_4.png
 
+#-------------------------------
+# Author Settings
+author:
+  name: Kin Lane
+  bio: My name is Kin Lane, and I am the founder of the Church of the Digital Self.
+  image: '/images/01.jpg'
+  avatar: '/images/15.jpg'
+
+# Example of adding a new link to the section author - {icon: "ion-logo-github", link: "https://github.com"}
+author-social: []
+
+#-------------------------------
+# Hero Settings
+hero:
+  hero__image: '/images/yellow-tree.jpeg'
+  hero__title: Welcome to the Church of the Digital Self
+  hero__description: 
+
+
+#-------------------------------
+# Footer section
+# Example of adding a new link to the footer - {icon: "ion-logo-github", link: "https://github.com"}
+# Other icons can be found at https://ionicons.com/v4/
+social: []
+
+#-------------------------------
+disqus-identifier: ''
+
+
+#-------------------------------
+# Google Analytics
+google-analytics: # Add your identifier. For example UA-99631805-1.
+
+
+#-------------------------------
+# Newsletter
+mailchimp:
+  mailchimp-identifier: # Add your MailChimp form identifier. For example - blogenjoyfreedom.us16.list-manage.com/subscribe/post?u=cd56155d76ddeeb4c0bc4d080&amp;id=7a526cd13e
+
+# NOTE
+# If you don't want to use the subscribe section, just remove or comment out these lines.
+
+
+#-------------------------------
+# Contant form Settings
+contact:
+  email: info@thedigitalself.org # Add your email for contant form
+  description: Feel free to reach out with any questions. We are low-tech here, and simply use email to send and receive communications, and respect your time online reaching out.
+
+# NOTE
+# Mangila comes with a built-in contact form, that you can use with Formspree service to handle up to 50 submissions per month for free. You could also easily switch to another contact form service if you want.
+
+
+#-------------------------------
+# Build settings
 markdown: kramdown
-highlighter: rouge
-relative_permalinks: false
-permalink: /news/:year/:month/:day/:title/
-excerpt_separator: ""
+permalink: pretty
+plugins:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll/tagging
+
+paginate: 9
+paginate_path: "/page/:num"
+
+# Pages Path
+defaults:
+  - scope:
+      path: '_pages'
+    values:
+      permalink: /:basename:output_ext
+
+include:
+  - _pages
+
+# Tags
+tag_page_dir:         tag
+tag_page_layout:      tag_page
+tag_permalink_style:  pretty
+
+sass:
+  sass_dir: _sass
+  style: compressed

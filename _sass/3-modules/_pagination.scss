@@ -1,0 +1,9 @@
+/* Pagination */
+.load-more-section {
+  margin: 20px 0;
+  text-align: center;
+
+  @media only screen and (max-width: $mobile) {
+    margin: 0;
+  }
+}

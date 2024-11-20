@@ -1,0 +1,30 @@
+/* Footer */
+.footer {
+  position: relative;
+  padding: 60px 0;
+  margin-top: 60px;
+  background-color: $dark;
+
+  .footer__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    @media only screen and (max-width: $tablet) {
+      flex-direction: column;
+    }
+  }
+}
+
+/* Copyright */
+.copyright {
+  font-size: 13px;
+  text-align: center;
+  color: $white;
+  a {
+    color: $blue-gray;
+    &:hover {
+      color: $brand-color;
+    }
+  }
+}

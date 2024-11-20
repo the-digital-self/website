@@ -1,4 +1,105 @@
-<div class="reveal">
+<!-- begin header -->
+<header class="header">
+  <div class="container">
+    <div class="row">
+      <div class="header__inner col col-12 col-d-10 push-d-1 col-m-12 push-m-0">
 
-  <!-- Any section element inside of this container is displayed as a slide -->
-  <div class="slides">
+        <div class="logo">
+          <a class="logo__link" href="{{ site.baseurl }}/">
+            {%if site.logo %}
+            <img class="logo__image" src="{{ site.baseurl }}{{ site.logo }}" alt="{{ site.title }}">
+            {% else %}
+            {{ site.title }}
+            {% endif %}
+          </a>
+        </div>
+
+        <div class="menu-overlay">
+          <nav class="main-nav">
+            <div class="main-nav__box">
+              <div class="nav__icon-close">
+                <i class="ion ion-md-close"></i>
+              </div>
+              <div class="nav-grid">
+
+                <div class="nav-grid__item">
+                  <h2 class="nav-grid__title">Menu</h2>
+                  <div class="left-nav">
+                    {%include navigation.html%}
+                  </div>
+                </div>
+
+                <div class="nav-grid__item">
+                  <div class="widget-about">
+                    <h2 class="nav-grid__title">About Me</h2>
+                    <div class="avatar">
+                      <a href="{{site.baseurl}}/about" class="avatar__image">
+                        <img class="lazy" data-src="{{site.baseurl}}{{site.author.avatar}}" alt="{{site.author.name}}">
+                      </a>
+                    </div>
+                    <p class="author-bio">{{site.author.bio}}</p>
+                    {% if site.author-social %}
+                    <div class="author-social">
+                      <ul class="author-social-list list-reset">
+                        {% for social in site.author-social %}
+                        <li class="author-social-item">
+                          <a class="author-social-link" href="{{social.link}}" target="_blank" rel="noopener" aria-label="social icon"><i class="ion {{social.icon}}"></i></a>
+                        </li>
+                        {% endfor %}
+                      </ul>
+                    </div>
+                    {% endif %}
+                  </div>
+                </div>
+
+                <div class="nav-grid__item">
+                  <h2 class="nav-grid__title">Recent Posts</h2>
+                  <div class="widget-recent">
+                    {% for post in site.posts limit:4 %}
+                    <div class="widget-recent__posts">
+                      {% if post.image %}
+                      <div class="widget-recent__header">
+                        <a class="widget-recent__image" href="{{ post.url }}">
+                          <img class="lazy" data-src="{{site.baseurl}}{{post.image}}" alt="{{post.title}}">
+                        </a>
+                      </div>
+                      {% endif %}
+                      <div class="widget-recent__content">
+                        <h3 class="widget-recent__title"><a href="{{ post.url }}">{{ post.title }}</a></h3>
+                      </div>
+                    </div>
+                    {% endfor %}
+                  </div>
+                </div>
+
+                <div class="nav-grid__item">
+                  <h2 class="nav-grid__title">Tag cloud</h2>
+                  <div class="tag__cloud">
+                    {{ site | tag_cloud }}
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </nav>
+        </div>
+
+        <div class="navigation">
+          <div class="top-nav">
+            {%include navigation.html%}
+          </div>
+        </div>
+
+        <div class="nav-buttons">
+          <i class="nav__icon nav__icon-menu ion ion-md-menu"></i>
+          <i class="nav__icon nav__icon-search ion ion-md-search"></i>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <div class="header__overlay"></div>
+</header>
+<!-- end header -->
+
+{% include search.html %}

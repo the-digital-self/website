@@ -1,0 +1,28 @@
+/* Social Links */
+.social {
+  margin-bottom: 10px;
+  text-align: center;
+  .social__item {
+    display: inline-block;
+    margin-left: 20px;
+    margin-bottom: 0;
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+
+  .social__link {
+    font-size: 21px;
+    line-height: 30px;
+    color: $white;
+    &:hover {
+      color: $brand-color;
+    }
+  }
+
+  @media only screen and (max-width: $tablet) {
+    .social__item {
+      margin-left: 15px;
+    }
+  }
+}

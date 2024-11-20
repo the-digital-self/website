@@ -1,0 +1,147 @@
+/* Article */
+.article {
+  flex-grow: 1;
+  margin-bottom: 60px;
+
+  &:hover {
+    .article__title {
+      a {
+        color: $text-color;
+        text-decoration-color: $text-color;
+      }
+    }
+  }
+}
+
+.article__title {
+  margin: 15px 0;
+  font-size: 26px;
+  line-height: 34px;
+  a {
+    text-decoration: underline;
+    text-decoration-color: transparent;
+  }
+  @media only screen and (max-width: $mobile) {
+    font-size: 26px;
+    line-height: 36px;
+  }
+}
+
+.article__image {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding-top: 75%;
+  overflow: hidden;
+  background-color: $gray;
+
+  img {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.article__content {
+  margin-top: 20px;
+}
+
+.article__excerpt {
+  margin: 0 0 15px;
+  font-size: 15px;
+  line-height: 25px;
+  color: $blue-gray;
+}
+
+.article__meta {
+  display: flex;
+  align-items: center;
+  font-size: 11px;
+  line-height: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: $dark;
+
+  .article-tags__box {
+    display: flex;
+    
+    &::before {
+      content: "|";
+      display: block;
+      padding: 0 .35rem;
+    }
+    
+    .article__tag {
+      color: inherit;
+    }
+  }
+
+  .article__tag {
+    &:hover {
+      color: $brand-color;
+    }
+    &::after {
+      content: ",";
+      margin-right: 2px;
+      display: inline-block;
+    }
+
+    &:last-child {
+      &::after {
+        content: none;
+      }
+    }
+  }
+
+}
+
+
+.article__bottom {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  font-size: 11px;
+  line-height: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: $dark;
+}
+
+.article__author {
+  display: flex;
+  align-items: center;
+
+  &::after {
+    content: "|";
+    display: block;
+    padding: 0 .35rem;
+  }
+
+  .article__author-image {
+    position: relative;
+    display: block;
+    margin-right: 5px;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    overflow: hidden;
+
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .article__author-name {
+    color: inherit;
+    &:hover {
+      color: $brand-color;
+    }
+  }
+}

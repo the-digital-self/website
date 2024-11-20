@@ -1,0 +1,372 @@
+/* Header */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100%;
+  height: auto;
+  box-shadow: 0 5px 30px rgba(0,0,0,.03);
+  background-color: $white;
+  transition: $global-transition;
+  color: $dark;
+  &.is-hide {
+    top: -90px;
+  }
+}
+
+.header__inner {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 90px;
+}
+
+.header__overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+  background-color: rgba(17, 17, 17, 0.7);
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s ease;
+  &.is-visible {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+/* Logo */
+.logo__link {
+  font-size: 28px;
+  line-height: 28px;
+  font-weight: 500;
+  color: $dark;
+  &:hover {
+    color: $dark;
+  }
+}
+
+.logo__image {
+  max-height: 75px;
+}
+
+/* Nav */
+.main-nav {
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.main-nav__box {
+  display: flex;
+  align-items: center;
+  width: 80%;
+  padding-top: 80px;
+  margin: 0 auto;
+
+  .nav__icon-close {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    z-index: 5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 27px;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    color: $dark;
+    transition: all .25s ease;
+    cursor: pointer;
+    &:hover {
+      color: $brand-color;
+      transform: rotate(90deg);
+    }
+    @media only screen and (max-width: $tablet) {
+      top: 25px;
+      right: 30px;
+    }
+  }
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+}
+
+.top-nav {
+  .nav__list {
+    .nav__item {
+      display: inline-block;
+      margin-right: 35px;
+      margin-bottom: 0;
+      &:last-child {
+        margin-right: 0;
+      }
+  
+      .nav__link {
+        position: relative;
+        display: inline-block;
+        font-size: 14px;
+        line-height: 26px;
+        font-weight: 500;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: $dark;
+        &:hover {
+          color: $brand-color;
+        }
+      }
+    }
+  }
+  @media only screen and (max-width: $desktop) {
+    display: none;
+  }
+}
+
+.left-nav {
+  .nav__list {
+    .nav__item {
+      display: block;
+      margin-bottom: 10px;
+      padding-bottom: 10px;
+      text-align: center;
+      border-bottom: 1px solid $gray;
+      &:last-child {
+        margin-bottom: 0;
+      }
+  
+      .nav__link {
+        position: relative;
+        font-size: 14px;
+        line-height: 24px;
+        text-transform: uppercase;
+        color: $dark;
+        &:hover {
+          color: $brand-color;
+        }
+      }
+      @media only screen and (max-width: $mobile) {
+        margin-bottom: 10px;
+      }
+    }
+  }
+}
+
+
+.nav-buttons {
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+  color: inherit;
+  
+  .nav__icon {
+    cursor: pointer;
+    transition: $global-transition;
+    &:hover {
+      color: $brand-color;
+    }
+    &:first-child {
+      margin-right: 15px;
+    }
+  }
+}
+
+.menu-overlay {
+  position: fixed;
+  top: 0;
+  right: -500px;
+  bottom: 0;
+  width: 500px;
+  z-index: 100;
+  background-color: $white;
+  transition: all 0.5s cubic-bezier(0.7, 0.4, 0, 1);
+  &.is-open {
+    right: 0;
+  }
+  @media only screen and (max-width: $mobile) {
+    right: -90%;
+    width: 90%;
+  }
+}
+
+.nav-grid {
+  width: 100%;
+  height: 85vh;
+  overflow-y: auto;
+}
+
+.nav-grid__item {
+  margin-bottom: 40px;
+  &:first-child {
+    display: none;
+    @media only screen and (max-width: $desktop) {
+      display: block;
+    }
+  }
+  &:last-child {
+    margin-bottom: 30px;
+  }
+  @media only screen and (max-width: $tablet) {
+    height: auto;
+  }
+}
+
+.nav-grid__title {
+  padding: 12px 0;
+  margin-bottom: 20px;
+  font-size: 14px;
+  letter-spacing: 0.1em;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: $background-color-alt;
+  @media only screen and (max-width: $tablet) {
+    margin-bottom: 30px;
+  }
+}
+
+// About Widget
+.avatar {
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.avatar__image {
+  position: relative;
+  display: block;
+  width: 180px;
+  height: 180px;
+  margin: 0 auto 15px;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: $gray;
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.author-bio {
+  max-width: 370px;
+  margin: 0 auto 15px;
+  font-size: 15px;
+  line-height: 23px;
+  text-align: center;
+}
+
+.author-social-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  .author-social-item {
+    margin: 0 3px;
+  }
+  .author-social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+    font-size: 17px;
+    border-radius: 50%;
+    border: 1px solid $border-color;
+    &:hover {
+      border-color: $brand-color;
+      color: $brand-color;
+    }
+  }
+}
+
+// Recent Posts Widget
+.widget-recent {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+  @media only screen and (max-width: $tablet) {
+    height: auto;
+  }
+}
+
+.widget-recent__posts {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 15px;
+  &:hover {
+    .widget-recent__title {
+      a {
+        color: $dark;
+        text-decoration-color: $dark;
+      }
+    }
+  }
+}
+
+.widget-recent__image {
+  position: relative;
+  display: block;
+  width: 90px;
+  height: 90px;
+  margin-right: 15px;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: $background-color-alt;
+  &::after {
+    content: "";
+    display: table;
+    padding-top: 75%;
+  }
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.widget-recent__title {
+  margin: 10px 0 0;
+  font-size: 17px;
+  a {
+    color: $dark;
+    text-decoration: underline;
+    text-decoration-color: transparent;
+  }
+}
+
+// Tags Widget
+.tag__cloud {
+  display: flex;
+  flex-wrap: wrap;
+  a {
+    display: inline-block;
+    margin: 0 2px 2px 0;
+    height: 30px;
+    line-height: 30px;
+    padding: 0 15px;
+    font-size: 12px;
+    border-radius: 3px;
+    color: $blue-gray;
+    background-color: $gray;
+    &:hover {
+      color: $white;
+      background-color: $brand-color;
+    }
+  }
+}
